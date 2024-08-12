@@ -1,5 +1,7 @@
+import InfoCard from "../components/InfoCard";
+
 const About = () => {
-  return <div>About</div>;
+  return <InfoCard />;
 };
 
 export default About;
