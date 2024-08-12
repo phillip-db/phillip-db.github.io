@@ -1,7 +1,8 @@
 import "./App.css";
-import Header from "./components/header/Header";
-import About from "./views/about/About";
-import Home from "./views/home/Home";
+import Header from "./components/Header";
+import About from "./views/About";
+import Home from "./views/Home";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
