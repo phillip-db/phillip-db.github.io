@@ -1,10 +1,13 @@
-import { Container, Nav, Navbar, Offcanvas } from "react-bootstrap";
+import { Container, Nav, Navbar, Offcanvas, Button } from "react-bootstrap";
 import ThemeIcon from "./icons/ThemeIcon";
 import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <Navbar expand="lg" className="sticky-top bd-navbar bg-body-tertiary">
+    <Navbar
+      expand="lg"
+      className="mb-4 sticky-top bd-navbar bg-body-tertiary border-bottom"
+    >
       <Container className="bd-gutter">
         <Navbar.Brand as={Link} to="/">
           phillip-db
@@ -21,7 +24,7 @@ const Header = () => {
             </Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
-            <Nav className="me-auto">
+            <Nav className="bd-navbar-nav">
               <Nav.Link as={Link} to="/">
                 Home
               </Nav.Link>
@@ -30,10 +33,22 @@ const Header = () => {
               </Nav.Link>
             </Nav>
             <hr />
-            <Nav>
-              <div className="justify-content-enter">
-                <ThemeIcon />
-              </div>
+            <Nav className="ms-md-auto">
+              <Button
+                href="https://github.com/phillip-db"
+                target="_blank"
+                className="mx-1"
+              >
+                <i className="bi bi-github"></i>
+              </Button>
+              <Button
+                href="https://github.com/phillip-db"
+                target="_blank"
+                className="mx-1"
+              >
+                <i className="bi bi-github"></i>
+              </Button>
+              <ThemeIcon />
             </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>
