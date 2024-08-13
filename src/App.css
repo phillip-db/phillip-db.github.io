@@ -33,12 +33,8 @@
   }
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.App {
+  height: 100%;
 }
 
 .jumbotron {
