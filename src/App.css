@@ -33,7 +33,7 @@
 }
 
 .jumbotron {
-  margin: 20px;
+  margin-bottom: 20px;
 }
 
 .toggle {
@@ -73,7 +73,6 @@
 }
 
 .pdb-footer {
-  margin-top: 20px;
   width: 100%;
 }
 

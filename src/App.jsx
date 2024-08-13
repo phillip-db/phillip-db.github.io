@@ -13,7 +13,7 @@ function App() {
       <div id="wrapper">
         <Router>
           <Header />
-          <div className="px-md-5 d-inline-block">
+          <div id="content" className="py-md-3 px-md-5 d-inline-block">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
