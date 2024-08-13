@@ -1,3 +1,5 @@
+@import 'bootstrap-icons/font/bootstrap-icons';
+
 #root {
   max-width: 1920px;
   margin: 0 auto;
@@ -78,4 +80,8 @@
 
 .pdb-footer {
   margin-top: 20px;
+}
+
+.i-jumbo {
+  font-size: 7em;
 }

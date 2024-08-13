@@ -4,6 +4,7 @@ const Jumbotron = () => {
   return (
     <Container className="jumbotron">
       <div className="p-5 text-center bg-body-tertiary rounded-3">
+        <i className="bi bi-terminal-fill i-jumbo"></i>
         <h1 className="text-body-emphasis">Jumbotron with icon</h1>
         <p className="col-lg-8 mx-auto fs-5 text-muted">
           This is a custom jumbotron featuring an SVG image at the top, some
