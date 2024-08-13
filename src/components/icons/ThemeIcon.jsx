@@ -22,12 +22,8 @@ const ThemeIcon = () => {
   }
 
   return (
-    <div className="toggle">
-      <button
-        className="clean-btn toggleButton"
-        type="button"
-        onClick={() => handleTheme()}
-      >
+    <div className="align-self-center">
+      <button id="dropdown-theme" type="button" onClick={() => handleTheme()}>
         {theme === "light" ? lightTheme : darkTheme}
       </button>
     </div>

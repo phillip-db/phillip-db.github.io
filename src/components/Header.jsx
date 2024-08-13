@@ -1,4 +1,4 @@
-import { Container, Nav, Navbar, Offcanvas, Button } from "react-bootstrap";
+import { Container, Nav, Navbar, Offcanvas, Row, Col } from "react-bootstrap";
 import ThemeIcon from "./icons/ThemeIcon";
 import { Link } from "react-router-dom";
 
@@ -7,6 +7,7 @@ const Header = () => {
     <Navbar
       expand="lg"
       className="mb-4 sticky-top bd-navbar bg-body-tertiary border-bottom"
+      data-bs-theme="dark"
     >
       <Container className="bd-gutter">
         <Navbar.Brand as={Link} to="/">
@@ -17,6 +18,7 @@ const Header = () => {
           id="offcanvasNavbar-expand-lg"
           placement="end"
           scroll="true"
+          data-bs-theme="dark"
         >
           <Offcanvas.Header closeButton>
             <Offcanvas.Title id="offcanvasNavbarLabel-expand-lg">
@@ -34,21 +36,35 @@ const Header = () => {
             </Nav>
             <hr />
             <Nav className="ms-md-auto">
-              <Button
-                href="https://github.com/phillip-db"
-                target="_blank"
-                className="mx-1"
-              >
-                <i className="bi bi-github"></i>
-              </Button>
-              <Button
-                href="https://github.com/phillip-db"
-                target="_blank"
-                className="mx-1"
-              >
-                <i className="bi bi-github"></i>
-              </Button>
-              <ThemeIcon />
+              <Container fluid>
+                <Row className="justify-content-center nav-buttons-other">
+                  <Col>
+                    <Nav.Link
+                      href="https://github.com/phillip-db"
+                      id="social-button"
+                      target="_blank"
+                      active
+                    >
+                      <i className="bi bi-github"></i>
+                    </Nav.Link>
+                  </Col>
+                  <Col>
+                    <Nav.Link
+                      href="https://github.com/phillip-db"
+                      id="social-button"
+                      target="_blank"
+                      active
+                    >
+                      <i className="bi bi-linkedin"></i>
+                    </Nav.Link>
+                  </Col>
+                </Row>
+              </Container>
+              <div className="vr mx-2 p-0 d-none d-lg-flex" />
+              <hr />
+              <div className="align-self-center">
+                <ThemeIcon />
+              </div>
             </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>

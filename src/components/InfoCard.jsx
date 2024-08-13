@@ -1,7 +1,7 @@
 import { Card, Button } from "react-bootstrap";
 const InfoCard = () => {
   return (
-    <Card className="px-0 mx-4 my-5 my-lg-2" style={{ width: "18rem" }}>
+    <Card className="px-0 mx-4 my-2" style={{ width: "18rem" }}>
       <Card.Img
         className="card-img"
         variant="top"

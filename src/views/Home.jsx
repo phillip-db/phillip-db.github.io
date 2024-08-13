@@ -1,6 +1,6 @@
 import Jumbotron from "../components/Jumbotron";
 import InfoCard from "../components/InfoCard";
-import { Row, Stack, Col, Container } from "react-bootstrap";
+import { Row, Stack, Container } from "react-bootstrap";
 
 const Home = () => {
   return (
@@ -8,6 +8,10 @@ const Home = () => {
       <Jumbotron />
       <Container>
         <Row xs={1} sm={2} md={4} className="justify-content-center">
+          <InfoCard />
+          <InfoCard />
+          <InfoCard />
+          <InfoCard />
           <InfoCard />
           <InfoCard />
         </Row>

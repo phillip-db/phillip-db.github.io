@@ -95,3 +95,21 @@ html, body {
 .info-card {
   width: 18rem;
 }
+
+#dropdown-menu > .dropdown-item.active, .dropdown-item:focus {
+  background-color: #555555;
+}
+
+#dropdown-theme, #dropdown-theme > .dropdown-toggle {
+  background-color: inherit;
+  border: none;
+}
+
+.nav-buttons-other > .col {
+  padding: 0px 5px;
+}
+
+#social-button {
+  padding-left: 0px;
+  padding-right: 0px;
+}
