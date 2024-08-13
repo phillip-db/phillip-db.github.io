@@ -1,9 +1,14 @@
 import { Card, Button } from "react-bootstrap";
-
 const InfoCard = () => {
   return (
     <Card style={{ width: "18rem" }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
+      <Card.Img
+        className="card-img"
+        variant="top"
+        src=""
+        width="100"
+        height="180"
+      />
       <Card.Body>
         <Card.Title>Card Title</Card.Title>
         <Card.Text>

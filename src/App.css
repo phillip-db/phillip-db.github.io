@@ -1,11 +1,5 @@
 @import 'bootstrap-icons/font/bootstrap-icons';
 
-#root {
-  max-width: 1920px;
-  margin: 0 auto;
-  text-align: center;
-}
-
 /* .logo {
   height: 6em;
   padding: 1.5em;
@@ -80,8 +74,21 @@
 
 .pdb-footer {
   margin-top: 20px;
+  width: 100%;
 }
 
 .i-jumbo {
   font-size: 7em;
+}
+
+#root {
+  max-width: 1920px;
+  text-align: center;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+html, body {
+  min-height: 100%;
 }
