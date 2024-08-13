@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <Navbar expand="lg" className="bg-body-tertiary rounded-2">
       <Container>
-        <Navbar.Brand href="#Home">phillip.db</Navbar.Brand>
+        <Navbar.Brand href="#Home">phillip-db</Navbar.Brand>
         <ThemeIcon />
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
