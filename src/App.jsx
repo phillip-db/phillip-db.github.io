@@ -1,16 +1,29 @@
 import "./App.css";
 import Header from "./components/Header";
-import About from "./views/About";
 import Home from "./views/Home";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Footer from "./components/Footer";
+import About from "./views/About";
+
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      <Header />
-      <Home />
-      <About />
-    </div>
+    <>
+      <div id="wrapper">
+        <Router>
+          <Header />
+          <div id="content" className="px-md-5 d-flex justify-content-center">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+            </Routes>
+          </div>
+        </Router>
+      </div>
+      <div style={{ flex: 1 }} />
+      <Footer />
+    </>
   );
 }
 
