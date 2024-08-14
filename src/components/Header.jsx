@@ -2,7 +2,7 @@ import { Container, Nav, Navbar, Offcanvas, Row, Col } from "react-bootstrap";
 import ThemeIcon from "./icons/ThemeIcon";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import Logo from "./svgs/logo";
+import Logo from "./svgs/Logo";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
