@@ -46,6 +46,7 @@ const Header = () => {
           onHide={handleClose}
           onExited={toggleVr}
           onEnter={toggleVr}
+          style={{ maxWidth: "50%" }}
         >
           <Offcanvas.Header closeButton>
             <Offcanvas.Title id="offcanvasNavbarLabel-expand-lg">

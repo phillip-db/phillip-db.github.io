@@ -7,7 +7,7 @@ const Jumbotron = () => {
       <div className="p-5 text-center bg-body-tertiary rounded-3">
         <div
           className="pb-3 mx-auto text-body-emphasis"
-          style={{ width: "10rem" }}
+          style={{ maxWidth: "10rem" }}
         >
           <Logo />
         </div>
