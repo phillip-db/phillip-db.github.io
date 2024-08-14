@@ -13,7 +13,10 @@ function App() {
       <div id="wrapper">
         <Router>
           <Header />
-          <div id="content" className="px-md-5 d-flex justify-content-center">
+          <div
+            id="content"
+            className="mx-auto px-md-5 d-flex justify-content-center"
+          >
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
