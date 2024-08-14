@@ -81,7 +81,6 @@
 }
 
 #root {
-  max-width: 1920px;
   text-align: center;
   display: flex;
   min-height: 100vh;
@@ -107,9 +106,18 @@ html, body {
 
 .nav-buttons-other > .col {
   padding: 0px 5px;
+  max-width: 2rem;
 }
 
 #social-button {
   padding-left: 0px;
   padding-right: 0px;
+}
+
+#content {
+  max-width: 1920px;
+}
+
+.code-link {
+  color:inherit;
 }

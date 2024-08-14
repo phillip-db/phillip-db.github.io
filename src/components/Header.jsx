@@ -1,8 +1,25 @@
 import { Container, Nav, Navbar, Offcanvas, Row, Col } from "react-bootstrap";
 import ThemeIcon from "./icons/ThemeIcon";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import Logo from "./svgs/logo";
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [showVr, setShowVr] = useState(true);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const toggleVr = () => {
+    setShowVr(!showVr);
+  };
+
+  const handleClose = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <Navbar
       expand="lg"
@@ -11,14 +28,24 @@ const Header = () => {
     >
       <Container className="bd-gutter">
         <Navbar.Brand as={Link} to="/">
-          phillip-db
+          <div style={{ width: "3rem" }}>
+            <Logo />
+          </div>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="offcanvasNavbar-expand-lg" />
+        <Navbar.Toggle
+          id="navbar-toggle"
+          aria-controls="offcanvasNavbar-expand-lg"
+          onClick={toggleMenu}
+        />
         <Navbar.Offcanvas
           id="offcanvasNavbar-expand-lg"
           placement="end"
           scroll="true"
           data-bs-theme="dark"
+          show={menuOpen}
+          onHide={handleClose}
+          onExited={toggleVr}
+          onEnter={toggleVr}
         >
           <Offcanvas.Header closeButton>
             <Offcanvas.Title id="offcanvasNavbarLabel-expand-lg">
@@ -27,10 +54,10 @@ const Header = () => {
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Nav className="bd-navbar-nav">
-              <Nav.Link as={Link} to="/">
+              <Nav.Link as={Link} to="/" onClick={handleClose}>
                 Home
               </Nav.Link>
-              <Nav.Link as={Link} to="/about">
+              <Nav.Link as={Link} to="/about" onClick={handleClose}>
                 About
               </Nav.Link>
             </Nav>
@@ -50,7 +77,7 @@ const Header = () => {
                   </Col>
                   <Col>
                     <Nav.Link
-                      href="https://github.com/phillip-db"
+                      href="https://www.linkedin.com/in/phillip-burleigh/"
                       id="social-button"
                       target="_blank"
                       active
@@ -60,7 +87,9 @@ const Header = () => {
                   </Col>
                 </Row>
               </Container>
-              <div className="vr mx-2 p-0 d-none d-lg-flex" />
+              {showVr && (
+                <div className="nav-vr vr mx-2 p-0" style={{ minWidth: 1 }} />
+              )}
               <hr />
               <div className="align-self-center">
                 <ThemeIcon />
