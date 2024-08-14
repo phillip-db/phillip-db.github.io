@@ -1,5 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
-import Logo from "./svgs/logo";
+import Logo from "./svgs/Logo";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();

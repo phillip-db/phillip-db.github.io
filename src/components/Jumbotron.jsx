@@ -1,5 +1,5 @@
 import { Container } from "react-bootstrap";
-import Logo from "./svgs/logo";
+import Logo from "./svgs/Logo";
 
 const Jumbotron = () => {
   return (
