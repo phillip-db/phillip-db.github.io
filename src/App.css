@@ -106,6 +106,7 @@ html, body {
 
 .nav-buttons-other > .col {
   padding: 0px 5px;
+  max-width: 2rem;
 }
 
 #social-button {

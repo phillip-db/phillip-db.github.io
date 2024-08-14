@@ -1,7 +1,5 @@
-import InfoCard from "../components/InfoCard";
-
 const About = () => {
-  return <InfoCard />;
+  return <></>;
 };
 
 export default About;

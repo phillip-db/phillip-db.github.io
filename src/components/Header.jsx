@@ -2,10 +2,12 @@ import { Container, Nav, Navbar, Offcanvas, Row, Col } from "react-bootstrap";
 import ThemeIcon from "./icons/ThemeIcon";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import Logo from "./svgs/logo";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showVr, setShowVr] = useState(true);
+
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
@@ -26,7 +28,9 @@ const Header = () => {
     >
       <Container className="bd-gutter">
         <Navbar.Brand as={Link} to="/">
-          phillip-db
+          <div style={{ width: "3rem" }}>
+            <Logo />
+          </div>
         </Navbar.Brand>
         <Navbar.Toggle
           id="navbar-toggle"
