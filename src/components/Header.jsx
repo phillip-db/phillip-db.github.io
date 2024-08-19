@@ -49,7 +49,7 @@ const Header = () => {
         >
           <Offcanvas.Header closeButton>
             <Offcanvas.Title id="offcanvasNavbarLabel-expand-lg">
-              Offcanvas
+              phillip-db
             </Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
