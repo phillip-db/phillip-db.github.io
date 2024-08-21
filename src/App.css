@@ -121,3 +121,14 @@ html, body {
 .code-link {
   color:inherit;
 }
+
+.footer-link {
+  color:inherit;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color:inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}

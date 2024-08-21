@@ -10,8 +10,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 function App() {
   return (
     <>
-      <div id="wrapper">
-        <Router>
+      <Router>
+        <div id="wrapper">
           <Header />
           <div
             id="content"
@@ -22,10 +22,10 @@ function App() {
               <Route path="/about" element={<About />} />
             </Routes>
           </div>
-        </Router>
-      </div>
-      <div style={{ flex: 1 }} />
-      <Footer />
+        </div>
+        <div style={{ flex: 1 }} />
+        <Footer />
+      </Router>
     </>
   );
 }

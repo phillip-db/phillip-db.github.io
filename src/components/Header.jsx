@@ -88,7 +88,7 @@ const Header = () => {
                 </Row>
               </Container>
               {showVr && (
-                <div className="nav-vr vr mx-2 p-0" style={{ minWidth: 1 }} />
+                <div className="nav-vr vr mx-2 p-0" style={{ width: 1 }} />
               )}
               <hr />
               <div className="align-self-center">
