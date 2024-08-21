@@ -1,6 +1,6 @@
 import { Container, Nav, Navbar, Offcanvas, Row, Col } from "react-bootstrap";
 import ThemeIcon from "./icons/ThemeIcon";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import Logo from "./svgs/Logo";
 
@@ -54,10 +54,20 @@ const Header = () => {
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Nav className="bd-navbar-nav">
-              <Nav.Link as={Link} to="/" onClick={handleClose}>
+              <Nav.Link
+                as={NavLink}
+                to="/"
+                onClick={handleClose}
+                activeClassName="text-body-emphasis"
+              >
                 Home
               </Nav.Link>
-              <Nav.Link as={Link} to="/about" onClick={handleClose}>
+              <Nav.Link
+                as={NavLink}
+                to="/about"
+                onClick={handleClose}
+                activeClassName="text-body-emphasis"
+              >
                 About
               </Nav.Link>
             </Nav>
