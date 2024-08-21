@@ -2,8 +2,11 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Logo from "./svgs/Logo";
 
+import projectsJSON from "../assets/text/projects.json";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const projects = [...projectsJSON];
 
   return (
     <footer className="pdb-footer mt-3 pt-5 pb-2 bg-body-tertiary text-center">
@@ -62,16 +65,17 @@ const Footer = () => {
           <Col className="mt-1">
             <h5>Projects</h5>
             <ul className="footer-link-list list-unstyled">
-              <li className="mb-2">
-                <Link className="footer-link text-muted" to="#project1">
-                  Project 1
-                </Link>
-              </li>
-              <li className="mb-2">
-                <Link className="footer-link text-muted" to="#project2">
-                  Project 2
-                </Link>
-              </li>
+              {projects.map((proj) => (
+                <li className="mb-2" key={proj.id}>
+                  <Link
+                    className="footer-link text-muted"
+                    to={proj.src}
+                    target="_blank"
+                  >
+                    {proj.title}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </Col>
         </Row>

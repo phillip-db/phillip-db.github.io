@@ -1,6 +1,6 @@
 import { Container, Nav, Navbar, Offcanvas, Row, Col } from "react-bootstrap";
 import ThemeIcon from "./icons/ThemeIcon";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import Logo from "./svgs/Logo";
 
@@ -27,7 +27,7 @@ const Header = () => {
       data-bs-theme="dark"
     >
       <Container className="bd-gutter">
-        <Navbar.Brand as={Link} to="/">
+        <Navbar.Brand as={Link} to="/" onClick={() => window.scrollTo(0, 0)}>
           <div style={{ width: "3rem" }}>
             <Logo />
           </div>
@@ -54,10 +54,20 @@ const Header = () => {
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Nav className="bd-navbar-nav">
-              <Nav.Link as={Link} to="/" onClick={handleClose}>
+              <Nav.Link
+                as={NavLink}
+                to="/"
+                onClick={handleClose}
+                activeClassName="text-body-emphasis"
+              >
                 Home
               </Nav.Link>
-              <Nav.Link as={Link} to="/about" onClick={handleClose}>
+              <Nav.Link
+                as={NavLink}
+                to="/about"
+                onClick={handleClose}
+                activeClassName="text-body-emphasis"
+              >
                 About
               </Nav.Link>
             </Nav>
@@ -88,7 +98,7 @@ const Header = () => {
                 </Row>
               </Container>
               {showVr && (
-                <div className="nav-vr vr mx-2 p-0" style={{ width: 1 }} />
+                <div className="nav-vr vr mx-2 p-0" style={{ minWidth: 1 }} />
               )}
               <hr />
               <div className="align-self-center">
