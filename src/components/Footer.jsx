@@ -79,7 +79,7 @@ const Footer = () => {
             </ul>
           </Col>
         </Row>
-        <p>
+        <p className="mt-2">
           Copyright <i className="bi bi-c-circle"></i> {currentYear} phillip-db
         </p>
       </Container>
