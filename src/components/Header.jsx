@@ -27,7 +27,7 @@ const Header = () => {
       data-bs-theme="dark"
     >
       <Container className="bd-gutter">
-        <Navbar.Brand as={Link} to="/">
+        <Navbar.Brand as={Link} to="/" onClick={() => window.scrollTo(0, 0)}>
           <div style={{ width: "3rem" }}>
             <Logo />
           </div>
@@ -88,7 +88,7 @@ const Header = () => {
                 </Row>
               </Container>
               {showVr && (
-                <div className="nav-vr vr mx-2 p-0" style={{ width: 1 }} />
+                <div className="nav-vr vr mx-2 p-0" style={{ minWidth: 1 }} />
               )}
               <hr />
               <div className="align-self-center">
