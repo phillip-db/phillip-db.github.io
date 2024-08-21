@@ -1,4 +1,4 @@
-import { Card, Button } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 const ProjectCard = ({ project, icon }) => {
   const { id, title, description, src } = project;
   return (
@@ -15,9 +15,6 @@ const ProjectCard = ({ project, icon }) => {
         </Card.Title>
         <hr />
         <Card.Text>{description}</Card.Text>
-        {/* <Button variant="primary" href={src}>
-          View Source
-        </Button> */}
       </Card.Body>
     </Card>
   );
