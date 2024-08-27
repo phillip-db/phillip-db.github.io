@@ -56,8 +56,8 @@ const Footer = () => {
                 </Link>
               </li>
               <li className="mb-2">
-                <Link className="footer-link text-muted" to="about">
-                  About
+                <Link className="footer-link text-muted" to="/projects">
+                  Projects
                 </Link>
               </li>
             </ul>

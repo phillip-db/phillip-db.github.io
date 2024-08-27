@@ -70,7 +70,7 @@ const Header = () => {
                 Home
               </NavLink>
               <NavLink
-                to="/about"
+                to="/projects"
                 onClick={handleClose}
                 className={({ isActive, isPending, isTransitioning }) =>
                   "nav-link ".concat(
@@ -78,7 +78,7 @@ const Header = () => {
                   )
                 }
               >
-                About
+                Projects
               </NavLink>
             </Nav>
             <hr />
