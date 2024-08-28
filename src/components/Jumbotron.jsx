@@ -1,4 +1,5 @@
 import { Container } from "react-bootstrap";
+import TypewriterComponent from "typewriter-effect";
 import Logo from "./svgs/Logo";
 
 const Jumbotron = () => {
@@ -11,8 +12,18 @@ const Jumbotron = () => {
         >
           <Logo />
         </div>
-        <h2 className="text-body-emphasis">Hello there! My name is</h2>
-        <h1 className="text-body-emphasis">Phillip Burleigh</h1>
+        <h1 className="text-body-emphasis">
+          <TypewriterComponent
+            options={{
+              strings: ["Hello there! My name is", "Phillip Burleigh"],
+              autoStart: true,
+              loop: true,
+              deleteSpeed: 20,
+              delay: 70,
+              cursor: "_",
+            }}
+          />
+        </h1>
         <p className="col-lg-8 mx-auto fs-5 text-muted">
           Welcome to my developer portfolio built with{" "}
           <code>
