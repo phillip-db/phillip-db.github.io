@@ -11,7 +11,8 @@ const Jumbotron = () => {
         >
           <Logo />
         </div>
-        <h1 className="text-body-emphasis">Hello there!</h1>
+        <h2 className="text-body-emphasis">Hello there! My name is</h2>
+        <h1 className="text-body-emphasis">Phillip Burleigh</h1>
         <p className="col-lg-8 mx-auto fs-5 text-muted">
           Welcome to my developer portfolio built with{" "}
           <code>

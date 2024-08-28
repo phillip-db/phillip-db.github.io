@@ -47,29 +47,39 @@ const Header = () => {
           onExited={toggleVr}
           onEnter={toggleVr}
         >
-          <Offcanvas.Header closeButton>
-            <Offcanvas.Title id="offcanvasNavbarLabel-expand-lg">
+          <Offcanvas.Header closeButton className="pb-0">
+            <Offcanvas.Title
+              id="offcanvasNavbarLabel-expand-lg"
+              className="text-body-emphasis"
+            >
               phillip-db
             </Offcanvas.Title>
           </Offcanvas.Header>
-          <Offcanvas.Body>
-            <Nav className="bd-navbar-nav">
-              <Nav.Link
-                as={NavLink}
+          <Offcanvas.Body className="pt-0">
+            <hr />
+            <Nav className="bd-navbar-nav text-muted">
+              <NavLink
                 to="/"
                 onClick={handleClose}
-                activeClassName="text-body-emphasis"
+                className={({ isActive, isPending, isTransitioning }) =>
+                  "nav-link ".concat(
+                    isActive ? "fw-bold text-body-emphasis" : ""
+                  )
+                }
               >
                 Home
-              </Nav.Link>
-              <Nav.Link
-                as={NavLink}
-                to="/about"
+              </NavLink>
+              <NavLink
+                to="/projects"
                 onClick={handleClose}
-                activeClassName="text-body-emphasis"
+                className={({ isActive, isPending, isTransitioning }) =>
+                  "nav-link ".concat(
+                    isActive ? "fw-bold text-body-emphasis" : ""
+                  )
+                }
               >
-                About
-              </Nav.Link>
+                Projects
+              </NavLink>
             </Nav>
             <hr />
             <Nav className="ms-md-auto">
