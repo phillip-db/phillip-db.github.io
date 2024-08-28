@@ -1,6 +1,7 @@
-import { Card } from "react-bootstrap";
+import { Card, Row } from "react-bootstrap";
+
 const ProjectCard = ({ project }) => {
-  const { id, title, description, src } = project;
+  const { id, title, description, img, src } = project;
   const trimmedDesc = description.substring(0, 500);
 
   return (
@@ -14,12 +15,9 @@ const ProjectCard = ({ project }) => {
           href={src}
           target="_blank"
         >
-          <Card.Img
-            variant="top"
-            src="holder.js/100px180"
-            style={{ height: "250px" }}
-            className="w-100"
-          />
+          <div style={{ height: "15rem" }} className="overflow-y-hidden">
+            <Card.Img variant="top" src={img || "holder.js/100px180"} />
+          </div>
           <Card.Body>
             <Card.Title>
               <svg
@@ -55,6 +53,7 @@ const ProjectCard = ({ project }) => {
               )}
               {trimmedDesc.length === description.length ? "." : "..."}
             </Card.Text>
+            <Row></Row>
           </Card.Body>
         </Card.Link>
       </Card>

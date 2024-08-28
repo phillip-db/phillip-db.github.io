@@ -26,6 +26,7 @@ const ProjectsProvider = ({ children }) => {
                   .description ||
                 project.description ||
                 "No Description",
+              img: gitInfo.find((proj) => proj.title === project.name).img,
               src:
                 gitInfo.find((proj) => proj.title === project.name).src ||
                 project.html_url,
