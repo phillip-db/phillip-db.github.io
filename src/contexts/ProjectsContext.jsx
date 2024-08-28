@@ -33,7 +33,7 @@ const ProjectsProvider = ({ children }) => {
           }),
       ]);
     });
-  });
+  }, []);
 
   return (
     <ProjectsContext.Provider value={projects}>

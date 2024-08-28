@@ -3,8 +3,6 @@ const ProjectCard = ({ project }) => {
   const { id, title, description, src } = project;
   const trimmedDesc = description.substring(0, 500);
 
-  console.log(description);
-
   return (
     <>
       <Card
