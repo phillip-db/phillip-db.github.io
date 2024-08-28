@@ -1,12 +1,12 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
 import Logo from "./svgs/Logo";
-
-import projectsJSON from "../assets/text/projects.json";
+import { ProjectsContext } from "../contexts/ProjectsContext";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const projects = [...projectsJSON];
+  const projects = useContext(ProjectsContext);
 
   return (
     <footer className="pdb-footer mt-3 pt-5 pb-2 bg-body-tertiary text-center">
