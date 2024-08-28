@@ -1,26 +1,52 @@
-import { Card } from "react-bootstrap";
+import { Card, Row, Col } from "react-bootstrap";
+import { getRepoLanguages } from "../services/projectService";
+import { useState, useEffect } from "react";
+
 const ProjectCard = ({ project }) => {
-  const { id, title, description, src } = project;
+  const { id, title, description, img, projLanguage, src } = project;
   const trimmedDesc = description.substring(0, 500);
+  const [language, setLanguage] = useState(projLanguage || "Unspecified");
+  const [colors, setColors] = useState();
+
+  const urlColors =
+    "https://raw.githubusercontent.com/ozh/github-colors/master/colors.json";
+
+  useEffect(() => {
+    if (id > 50) {
+      getRepoLanguages(
+        title.substring(0, title.indexOf("/")),
+        title.substring(title.indexOf("/") + 1)
+      )
+        .then((result) => {
+          setLanguage(
+            Object.entries(result.data).sort(([, a], [, b]) => b - a)[0][0]
+          );
+        })
+        .catch();
+    }
+
+    fetch(urlColors)
+      .then((response) => response.json())
+      .then((data) => {
+        setColors(data);
+      });
+  }, []);
 
   return (
     <>
       <Card
-        className="p-0 mx-3 my-3 h-100"
+        className="p-0 mx-auto my-3 h-100 proj-scale proj-card"
         style={{ width: "24rem", textAlign: "left" }}
       >
         <Card.Link
-          className="link-underline link-underline-opacity-0"
+          className="link-underline link-underline-opacity-0 link-body-emphasis"
           href={src}
           target="_blank"
         >
-          <Card.Img
-            variant="top"
-            src="holder.js/100px180"
-            style={{ height: "250px" }}
-            className="w-100"
-          />
-          <Card.Body>
+          <div style={{ height: "15rem" }} className="overflow-y-hidden">
+            <Card.Img variant="top" src={img || "holder.js/100px180"} />
+          </div>
+          <Card.Body className="pb-0">
             <Card.Title>
               <svg
                 stroke="currentColor"
@@ -40,10 +66,10 @@ const ProjectCard = ({ project }) => {
                   ></path>
                 </g>
               </svg>{" "}
-              {title}
+              <span className="proj-title">{title}</span>
             </Card.Title>
             <hr />
-            <Card.Text className="link-body-emphasis">
+            <Card.Text>
               {trimmedDesc.substring(
                 0,
                 Math.min(
@@ -55,6 +81,24 @@ const ProjectCard = ({ project }) => {
               )}
               {trimmedDesc.length === description.length ? "." : "..."}
             </Card.Text>
+            <Row>
+              <Col className="d-flex">
+                {language && colors && (
+                  <>
+                    <i
+                      className="bi bi-circle-fill pe-2"
+                      style={{
+                        color:
+                          language === "Unspecified"
+                            ? "#FFFFFF"
+                            : colors[language].color,
+                      }}
+                    ></i>
+                    <p className="text-body-emphasis">{language}</p>
+                  </>
+                )}
+              </Col>
+            </Row>
           </Card.Body>
         </Card.Link>
       </Card>

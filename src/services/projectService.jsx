@@ -4,15 +4,15 @@ const octokit = new Octokit({
   auth: import.meta.env.VITE_GITHUB_PAT,
 });
 
-const getMatchingProjects = () =>
-  octokit.request("GET /repos/{owner}/{repo}", {
-    owner: "phillip-db",
-    repo: "MyLeague",
-  });
-
 const getProjects = () =>
   octokit.request("GET /users/{username}/repos", {
     username: "phillip-db",
   });
 
-export { getMatchingProjects, getProjects };
+const getRepoLanguages = (o, r) =>
+  octokit.request("GET /repos/{owner}/{repo}/languages", {
+    owner: o,
+    repo: r,
+  });
+
+export { getProjects, getRepoLanguages };
