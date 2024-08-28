@@ -43,10 +43,10 @@ const Home = () => {
           </Col>
           <Col md={6} lg={4} className="mx-md-auto">
             <Image
-              className="mx-auto"
+              className="mx-auto pb-rotate my-3"
               rounded
               loading="lazy"
-              src="images/projects/3dassets.jpg"
+              src="images/headshot.jpg"
               width={250}
               height={250}
             />

@@ -136,3 +136,19 @@ html, body {
 .nav-active {
   font-weight: bold;
 }
+
+.pb-rotate {
+  transition: transform .2s, scale .2s;
+}
+.pb-rotate:hover {
+  transform: rotate(-3deg);
+  scale: 110%;
+}
+
+.proj-scale {
+  transition: scale .1s;
+}
+
+.proj-scale:hover {
+  scale: 105%
+}
