@@ -9,4 +9,10 @@ const getProjects = () =>
     username: "phillip-db",
   });
 
-export { getProjects };
+const getRepoLanguages = (o, r) =>
+  octokit.request("GET /repos/{owner}/{repo}/languages", {
+    owner: o,
+    repo: r,
+  });
+
+export { getProjects, getRepoLanguages };

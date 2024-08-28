@@ -152,3 +152,7 @@ html, body {
 .proj-scale:hover {
   scale: 105%
 }
+
+.proj-title {
+  color: var(--bs-primary-text-emphasis)
+}
