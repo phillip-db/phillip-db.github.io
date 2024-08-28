@@ -1,7 +1,9 @@
 import { Card } from "react-bootstrap";
 const ProjectCard = ({ project }) => {
-  const { id, title, description, src, type } = project;
+  const { id, title, description, src } = project;
   const trimmedDesc = description.substring(0, 500);
+
+  console.log(description);
 
   return (
     <>
@@ -46,7 +48,12 @@ const ProjectCard = ({ project }) => {
             <Card.Text className="link-body-emphasis">
               {trimmedDesc.substring(
                 0,
-                Math.min(trimmedDesc.length, trimmedDesc.lastIndexOf("."))
+                Math.min(
+                  trimmedDesc.length,
+                  trimmedDesc.lastIndexOf(".") > 0
+                    ? trimmedDesc.lastIndexOf(".")
+                    : trimmedDesc.length
+                )
               )}
               {trimmedDesc.length === description.length ? "." : "..."}
             </Card.Text>
