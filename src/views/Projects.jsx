@@ -8,7 +8,7 @@ const Projects = () => {
 
   return (
     <Container>
-      <Row xs={1} sm={2} md={4} className="justify-content-left mx-auto">
+      <Row xs={1} sm={2} md={4} className="px-auto">
         {projects.map((proj) => (
           <ProjectCard key={proj.id} project={proj} />
         ))}

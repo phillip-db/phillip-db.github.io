@@ -6,7 +6,7 @@ const ProjectCard = ({ project }) => {
   return (
     <>
       <Card
-        className="p-0 mx-3 my-3 h-100"
+        className="p-0 mx-auto my-3 h-100"
         style={{ width: "24rem", textAlign: "left" }}
       >
         <Card.Link
