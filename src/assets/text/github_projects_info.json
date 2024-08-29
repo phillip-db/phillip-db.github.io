@@ -1,16 +1,17 @@
 [
   {
     "title": "BirdBlog",
-    "description": "BirdBlog is a powerful web application that provides users with a unique and innovative way to stay informed about trending topics on X (formerly Twitter). The platform leverages recent releases of artificial intelligence to create engaging and informative written and visual content on a wide range of subjects.",
+    "description": "BirdBlog is a powerful web application that provides users with a unique and innovative way to stay informed about trending topics on X (formerly Twitter).",
     "img": "images/projects/birdblog.jpg"
   },
   {
     "title": "MyLeague",
-    "description": ""
+    "description": "",
+    "img": "images/projects/myleague.png"
   },
   {
     "title": "budget-simulator",
-    "description": "",
+    "description": "Android App for students to learn about budgeting. Complete with stats tracking and an achievement system.",
     "img": "images/projects/budget-simulator.png"
   }
 ]

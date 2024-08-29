@@ -12,14 +12,14 @@ const Footer = () => {
     <footer className="pdb-footer mt-3 pt-5 pb-2 bg-body-tertiary text-center">
       <Container>
         <Row>
-          <Col sm={4}>
-            <div className="d-flex pb-3 mx-auto text-body-emphasis">
+          <Col sm={4} className="text-xs-center">
+            <div className="d-flex pb-3 mx-auto text-body-emphasis justify-content-center">
               <span style={{ maxWidth: "3rem", marginLeft: "-0.3rem" }}>
                 <Logo />
               </span>
               <p className="my-auto">phillip-db</p>
             </div>
-            <p className="text-muted text-start">
+            <p className="text-muted text-start text-center">
               Built with{" "}
               <a
                 className="footer-link text-body-emphasis"

@@ -1,4 +1,4 @@
-import { Container, Row } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "../components/ProjectCard";
 import { ProjectsContext } from "../contexts/ProjectsContext";
 import { useContext } from "react";
@@ -8,9 +8,11 @@ const Projects = () => {
 
   return (
     <Container>
-      <Row xs={1} sm={2} md={4} className="px-auto">
+      <Row xs={1} sm={1} md={2} lg={2} xl={3} className="px-auto">
         {projects.map((proj) => (
-          <ProjectCard key={proj.id} project={proj} />
+          <Col key={proj.id} className="my-3">
+            <ProjectCard project={proj} />
+          </Col>
         ))}
       </Row>
     </Container>

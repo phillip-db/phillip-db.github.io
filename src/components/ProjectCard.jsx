@@ -35,8 +35,8 @@ const ProjectCard = ({ project }) => {
   return (
     <>
       <Card
-        className="p-0 mx-auto my-3 h-100 proj-scale proj-card"
-        style={{ width: "24rem", textAlign: "left" }}
+        className="p-0 mx-auto proj-scale proj-card"
+        style={{ textAlign: "left" }}
       >
         <Card.Link
           className="link-underline link-underline-opacity-0 link-body-emphasis"
@@ -66,7 +66,19 @@ const ProjectCard = ({ project }) => {
                   ></path>
                 </g>
               </svg>{" "}
-              <span className="proj-title">{title}</span>
+              {colors && (
+                <span
+                  className="proj-title"
+                  style={{
+                    color:
+                      language === "Unspecified"
+                        ? "#FFFFFF"
+                        : colors[language].color,
+                  }}
+                >
+                  {title}
+                </span>
+              )}
             </Card.Title>
             <hr />
             <Card.Text>
