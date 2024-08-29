@@ -15,7 +15,7 @@ const Jumbotron = () => {
         <h1 className="text-body-emphasis">
           <TypewriterComponent
             options={{
-              strings: ["Hello there! My name is", "Phillip Burleigh"],
+              strings: ["Hello there! I'm", "Phillip Burleigh"],
               autoStart: true,
               loop: true,
               deleteSpeed: 20,
