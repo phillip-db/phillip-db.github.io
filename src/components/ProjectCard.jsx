@@ -100,6 +100,7 @@ const ProjectCard = ({ project }) => {
                     <i
                       className="bi bi-circle-fill pe-2"
                       style={{
+                        paddingTop: "1px",
                         color:
                           language === "Unspecified"
                             ? "#FFFFFF"
