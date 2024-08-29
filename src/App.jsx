@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <ProjectsProvider>
-        <Router>
+        <Router basename="/">
           <div id="wrapper">
             <Header />
             <div
