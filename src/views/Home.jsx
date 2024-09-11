@@ -1,5 +1,6 @@
 import Jumbotron from "../components/Jumbotron";
 import { Stack, Image, Container, Col, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -16,7 +17,8 @@ const Home = () => {
               I currently work in Chicago for RedMane Technology as a Cúram
               developer, helping create solutions for social program management.
               Previously I worked at Shade Inc. and developed scripts for
-              previewing 3D assets (see my <a href="/projects">Projects</a>).
+              previewing 3D assets (see my <Link to="/projects">Projects</Link>
+              ).
             </p>
             <p>
               Casual pianist and long-time music enjoyer, aspiring game
