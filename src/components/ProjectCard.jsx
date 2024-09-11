@@ -2,35 +2,9 @@ import { Card, Row, Col } from "react-bootstrap";
 import { getRepoLanguages } from "../services/projectService";
 import { useState, useEffect } from "react";
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, colors }) => {
   const { id, title, description, img, projLanguage, src } = project;
   const trimmedDesc = description.substring(0, 500);
-  const [language, setLanguage] = useState(projLanguage || "Unspecified");
-  const [colors, setColors] = useState();
-
-  const urlColors =
-    "https://raw.githubusercontent.com/ozh/github-colors/master/colors.json";
-
-  useEffect(() => {
-    if (id > 50) {
-      getRepoLanguages(
-        title.substring(0, title.indexOf("/")),
-        title.substring(title.indexOf("/") + 1)
-      )
-        .then((result) => {
-          setLanguage(
-            Object.entries(result.data).sort(([, a], [, b]) => b - a)[0][0]
-          );
-        })
-        .catch();
-    }
-
-    fetch(urlColors)
-      .then((response) => response.json())
-      .then((data) => {
-        setColors(data);
-      });
-  }, []);
 
   return (
     <>
@@ -44,7 +18,11 @@ const ProjectCard = ({ project }) => {
           target="_blank"
         >
           <div style={{ height: "15rem" }} className="overflow-y-hidden">
-            <Card.Img variant="top" src={img || "holder.js/100px180"} />
+            <Card.Img
+              variant="top"
+              src={img || "holder.js/100px180"}
+              loading="lazy"
+            />
           </div>
           <Card.Body className="pb-0">
             <Card.Title>
@@ -71,9 +49,9 @@ const ProjectCard = ({ project }) => {
                   className="proj-title"
                   style={{
                     color:
-                      language === "Unspecified"
+                      projLanguage === "Unspecified"
                         ? "#FFFFFF"
-                        : colors[language].color,
+                        : colors[projLanguage].color,
                   }}
                 >
                   {title}
@@ -95,19 +73,19 @@ const ProjectCard = ({ project }) => {
             </Card.Text>
             <Row>
               <Col className="d-flex">
-                {language && colors && (
+                {projLanguage && colors && (
                   <>
                     <i
                       className="bi bi-circle-fill pe-2"
                       style={{
                         paddingTop: "1px",
                         color:
-                          language === "Unspecified"
+                          projLanguage === "Unspecified"
                             ? "#FFFFFF"
-                            : colors[language].color,
+                            : colors[projLanguage].color,
                       }}
                     ></i>
-                    <p className="text-body-emphasis">{language}</p>
+                    <p className="text-body-emphasis">{projLanguage}</p>
                   </>
                 )}
               </Col>

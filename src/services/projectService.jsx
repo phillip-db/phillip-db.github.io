@@ -15,4 +15,16 @@ const getRepoLanguages = (o, r) =>
     repo: r,
   });
 
-export { getProjects, getRepoLanguages };
+const getProjectLanguage = async (title) => {
+  return await getRepoLanguages(
+    title.substring(0, title.indexOf("/")),
+    title.substring(title.indexOf("/") + 1)
+  )
+    .then(
+      (result) =>
+        Object.entries(result.data).sort(([, a], [, b]) => b - a)[0][0]
+    )
+    .catch();
+};
+
+export { getProjects, getRepoLanguages, getProjectLanguage };
