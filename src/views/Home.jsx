@@ -9,17 +9,18 @@ const Home = () => {
         <Row className="d-flex flex-wrap mx-2">
           <Col md={12} lg={8} className="text-start">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-              cursus lorem eget lectus ullamcorper scelerisque. Curabitur
-              sollicitudin sollicitudin mi, vel ullamcorper felis.
+              Software developer and UIUC graduate based in the Chicago area
+              with a passion for problem solving.
             </p>
             <p>
-              Aenean cursus tempor pretium. Praesent vitae viverra mauris. Donec
-              metus est, interdum in leo et, accumsan vehicula lectus.
+              I currently work in Chicago for RedMane Technology as a Cúram
+              developer, helping create solutions for social program management.
+              Previously I worked at Shade Inc. and developed scripts for
+              previewing 3D assets (see my <a href="/projects">Projects</a>).
             </p>
             <p>
-              Pellentesque pulvinar vel magna eget commodo. Pellentesque eu
-              dictum ex, in gravida mi.
+              Casual pianist and long-time music enjoyer, aspiring game
+              developer, and novice fitness enthusiast.
             </p>
           </Col>
           <Col md={6} lg={4} className="mx-md-auto">
