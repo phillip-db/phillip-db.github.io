@@ -1,9 +1,7 @@
 import { Card, Row, Col } from "react-bootstrap";
-import { getRepoLanguages } from "../services/projectService";
-import { useState, useEffect } from "react";
 
 const ProjectCard = ({ project, colors }) => {
-  const { id, title, description, img, projLanguage, src } = project;
+  const { title, description, img, projLanguage, src } = project;
   const trimmedDesc = description.substring(0, 500);
 
   return (

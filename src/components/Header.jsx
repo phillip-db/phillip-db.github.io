@@ -61,7 +61,7 @@ const Header = () => {
               <NavLink
                 to="/"
                 onClick={handleClose}
-                className={({ isActive, isPending, isTransitioning }) =>
+                className={({ isActive }) =>
                   "nav-link ".concat(
                     isActive ? "fw-bold text-body-emphasis" : ""
                   )
@@ -72,7 +72,7 @@ const Header = () => {
               <NavLink
                 to="/projects"
                 onClick={handleClose}
-                className={({ isActive, isPending, isTransitioning }) =>
+                className={({ isActive }) =>
                   "nav-link ".concat(
                     isActive ? "fw-bold text-body-emphasis" : ""
                   )
