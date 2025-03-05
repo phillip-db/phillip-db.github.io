@@ -1,8 +1,11 @@
 import Jumbotron from "../components/Jumbotron";
 import { Stack, Image, Container, Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Home = () => {
+  const [rotation, setRotation] = useState(1);
+
   return (
     <Stack gap={3} style={{ maxWidth: "75%" }}>
       <Jumbotron />
@@ -27,9 +30,11 @@ const Home = () => {
           </Col>
           <Col md={6} lg={4} className="mx-md-auto">
             <Image
-              className="mx-auto pb-rotate my-3"
+              style={{ "--home-img-rotation": rotation }}
+              className={"mx-auto pb-rotate my-3"}
               rounded
               loading="lazy"
+              onMouseOut={() => setRotation(rotation * -1)}
               src="images/headshot.jpg"
               width={250}
               height={250}

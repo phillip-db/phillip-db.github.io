@@ -141,7 +141,7 @@ html, body {
   transition: transform .2s, scale .2s;
 }
 .pb-rotate:hover {
-  transform: rotate(-3deg);
+  transform: rotate(calc(var(--home-img-rotation) * 3deg));
   scale: 110%;
 }
 
